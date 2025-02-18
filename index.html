@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metas Juntas</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; }
+    #game-container { margin-top: 20px; }
+    .stage { display: none; }
+    .option { cursor: pointer; margin: 10px; padding: 10px; border: 1px solid #ccc; display: inline-block; }
+    .task-list { text-align: left; margin: 0 auto; width: 60%; }
+    .task { border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Metas Juntas</h1>
+  <div id="game-container">
+    <div id="stage-1" class="stage">
+      <h2>Metas Profesionales</h2>
+      <p>Discutan y elijan una meta profesional en común:</p>
+      <div class="option" onclick="addTask('Establecer un negocio juntos', 2)">Establecer un negocio juntos</div>
+      <div class="option" onclick="addTask('Desarrollar un proyecto de investigación', 2)">Desarrollar un proyecto de investigación</div>
+    </div>
+
+    <div id="stage-2" class="stage">
+      <h2>Metas Personales</h2>
+      <p>Discutan y elijan una meta personal en común:</p>
+      <div class="option" onclick="addTask('Aprender un nuevo idioma', 3)">Aprender un nuevo idioma</div>
+      <div class="option" onclick="addTask('Empezar un hobby juntos', 3)">Empezar un hobby juntos</div>
+    </div>
+
+    <div id="stage-3" class="stage">
+      <h2>Metas de Relación</h2>
+      <p>Discutan y elijan una meta de relación en común:</p>
+      <div class="option" onclick="addTask('Planificar un viaje especial', 4)">Planificar un viaje especial</div>
+      <div class="option" onclick="addTask('Establecer planes a largo plazo', 4)">Establecer planes a largo plazo</div>
+    </div>
+
+    <div id="stage-4" class="stage">
+      <h2>Lista de Tareas</h2>
+      <div id="task-list" class="task-list"></div>
+      <button onclick="displayTaskList()">Mostrar Tareas</button>
+    </div>
+
+    <button id="start-button" onclick="startGame()">Comenzar Juego</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
